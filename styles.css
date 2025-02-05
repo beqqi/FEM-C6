@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Mansrope', sans-serif;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    max-width: 1200px;
+    margin: 190px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    
+}
+
+picture {
+        flex: 1;
+}
+
+picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#description {
+    flex: 2;
+    padding: 20px;
+}
+
+#description h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color:gray;
+    margin-bottom: 15px;
+}
+
+#description p {
+    font-size: 13px;
+    font-weight: 500;
+    color:gray;
+    line-height: 1.5;
+}
+
+#author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: bold;
+    color: gray;
+}
+
+.publish-date {
+    font-size: 13px;
+    color: #999;
+    font-weight: 300;
+}
+
+.share-btn {
+    position: absolute;
+    top: 200px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-btn button {
+    padding: 5px 10px;
+    background-color: hsl(212, 23%, 69%);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.share-btn button:hover {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.social-icons {
+    display: none;
+    position: absolute;
+    margin-bottom: 15dvh;
+    background-color: #fff;
+    padding: 10px 6px;
+    border-radius: 5px;
+    background-color: hsl(217, 19%, 35%);
+   
+    border-bottom: none;  
+    
+
+  
+}
+.social-icons::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;  /* Adjust this value for the size of the triangle */
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;  /* Adjust for the size of the triangle */
+    border-right: 10px solid transparent;  /* Adjust for the size of the triangle */
+    border-top: 10px solid hsl(217, 19%, 35%);  /* Color of the triangle */
+}
+
+.share_text, .social-icon {
+    text-decoration: none;
+    color:#fff;
+    margin: 5px 5px;
+    font-size: smaller;
+}
+.share_text {
+    color: hsl(212, 23%, 69%);
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    #description {
+        padding: 15px;
+    }
+
+    .share-btn {
+        margin-left: 0;
+        position: absolute;
+        top: 540px;
+        right: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    }
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
